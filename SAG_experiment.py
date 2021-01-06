@@ -19,8 +19,8 @@ n_site = 13
 # 23 dic 2018 - 23 jan 2019
 
 #data = '../data/GLOBAL_ANALYSIS_FORECAST_PHY_001_024_SMOC/*.nc' # local computer
-data = 'data/mercatorpsy4v3r1_gl12_mean_20180101_R20180110.nc'
-#data = '/data/oceanparcels/input_data/CMEMS/GLOBAL_ANALYSIS_FORECAST_PHY_001_024/*.nc' #gemini
+#data = 'data/mercatorpsy4v3r1_gl12_mean_20180101_R20180110.nc'
+data = '/data/oceanparcels/input_data/CMEMS/GLOBAL_ANALYSIS_FORECAST_PHY_001_024/*.nc' #gemini
 
 filesnames = {'U': data,
              'V': data}
