@@ -83,7 +83,7 @@ pset = ParticleSet.from_list(fieldset=fieldset,
                              time=date_cluster)
 
 # Output file
-output_file = pset.ParticleFile(name='data/test1.nc', outputdt=timedelta(hours=2))
+output_file = pset.ParticleFile(name='/scratch/cpierard/test1month.nc', outputdt=timedelta(hours=2))
 
 # Execute!
 pset.execute(pset.Kernel(AdvectionRK4) + DiffusionUniformKh,
