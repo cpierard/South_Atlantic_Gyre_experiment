@@ -8,8 +8,8 @@ import datetime
 import numpy as np
 import pickle
 
-n_points = 1000 # particles per sampling site
-n_days = 30#(9*30)+(365*2) # number of days to simulate
+n_points = 100000 # particles per sampling site
+n_days = 22*30# number of days to simulate
 K_bar = 10 # diffusion value
 n_site = 13
 
@@ -21,6 +21,7 @@ n_site = 13
 #data = '../data/GLOBAL_ANALYSIS_FORECAST_PHY_001_024_SMOC/*.nc' # local computer
 #data = 'data/mercatorpsy4v3r1_gl12_mean_20180101_R20180110.nc'
 data = '/data/oceanparcels/input_data/CMEMS/GLOBAL_ANALYSIS_FORECAST_PHY_001_024/*.nc' #gemini
+#2018-01-01 to 2019-11-27
 
 filesnames = {'U': data,
              'V': data}
@@ -83,7 +84,7 @@ pset = ParticleSet.from_list(fieldset=fieldset,
                              time=date_cluster)
 
 # Output file
-output_file = pset.ParticleFile(name='/scratch/cpierard/test1month.nc', outputdt=timedelta(hours=2))
+output_file = pset.ParticleFile(name='/scratch/cpierard/forward_2years(2018-2018).nc', outputdt=timedelta(hours=12))
 
 # Execute!
 pset.execute(pset.Kernel(AdvectionRK4) + DiffusionUniformKh,
