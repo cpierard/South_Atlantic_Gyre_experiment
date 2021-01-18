@@ -8,7 +8,7 @@ import datetime
 import numpy as np
 import pickle
 
-n_points = 100000 # particles per sampling site
+n_points = 10000 # particles per sampling site
 n_days = 22*30# number of days to simulate
 K_bar = 10 # diffusion value
 n_site = 13
@@ -84,7 +84,7 @@ pset = ParticleSet.from_list(fieldset=fieldset,
                              time=date_cluster)
 
 # Output file
-output_file = pset.ParticleFile(name='/scratch/cpierard/forward_2years(2018-2018).nc', outputdt=timedelta(hours=12))
+output_file = pset.ParticleFile(name='/scratch/cpierard/forward_2years.nc', outputdt=timedelta(hours=12))
 
 # Execute!
 pset.execute(pset.Kernel(AdvectionRK4) + DiffusionUniformKh,
