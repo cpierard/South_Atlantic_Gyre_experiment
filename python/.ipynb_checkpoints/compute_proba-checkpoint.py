@@ -5,9 +5,6 @@ import xarray as xr
 import itertools
 """
 Computes the probability field from a Ocean Parcels simulation.
-
-Merges 2d histograms of different OP output files. 
-1 output file per source.
 """
 # Loading data
 # Plastic sources
